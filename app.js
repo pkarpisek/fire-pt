@@ -1,13 +1,12 @@
-// Firebase configuration (replace with your actual config)
+// Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyD6JgE7sP4MFKgDz4DyX7QUQpKH8oZNKOQ",
-  authDomain: "fire-reporting-app.firebaseapp.com",
-  databaseURL: "https://fire-reporting-app-default-rtdb.europe-west1.firebasedatabase.app/",
-  projectId: "fire-reporting-app",
-  storageBucket: "fire-reporting-app.appspot.com",
-  messagingSenderId: "17110938256",
-  appId: "1:17110938256:web:311ddb9cd088e161f09e15",
-  measurementId: "G-9KHJ6Y4ZFZ"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
