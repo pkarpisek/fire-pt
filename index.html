@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Help Map</title>
+  <title>Mapa de Ajuda Comunitária</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Google Places API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 </head>
 <body>
   <h1>Mapa de Ajuda Comunitária</h1>
-  <div id="map" style="height: 500px;"></div>
+  <div id="map"></div>
 
-  <!-- Modal for adding help details -->
-  <div id="addHelpModal" class="modal">
+  <!-- "+" Button for Adding a New Help Location -->
+  <button id="addLocationBtn">+</button>
+
+  <!-- Modal for Adding Address with Autocomplete -->
+  <div id="addAddressModal" class="modal">
     <div class="modal-content">
-      <h3>Adicionar um novo ponto de ajuda</h3>
-      <label for="helpName">Quem está pedindo ajuda?</label><br>
-      <input type="text" id="helpName" placeholder="Ex: Bombeiros do Porto" required><br><br>
-      <label for="helpNeeds">O que precisam?</label><br>
-      <input type="text" id="helpNeeds" placeholder="Ex: Água, comida, etc." required><br><br>
-      <label for="helpWhatsApp">Número do WhatsApp</label><br>
-      <input type="text" id="helpWhatsApp" placeholder="Ex: +351 912 345 678" required><br><br>
-      <button id="submitHelp">Confirmar</button>
-      <button id="cancelHelp">Cancelar</button>
+      <h3>Adicionar novo local de ajuda</h3>
+      <label for="addressInput">Endereço:</label><br>
+      <input type="text" id="addressInput" placeholder="Digite o endereço" required><br><br>
+      <button id="confirmAddress">Confirmar Endereço</button>
+      <button id="cancelAddress">Cancelar</button>
     </div>
   </div>
 
