@@ -63,7 +63,7 @@ map.on('click', function(e) {
       alert('Por favor, preencha todos os campos.');
     }
   };
-
+//
   // Cancel adding help location
   document.getElementById('cancelHelp').onclick = function() {
     map.removeLayer(tempMarker); // Remove the temporary marker if cancelled
