@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Help Map</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Mapa de Ajuda Comunitária</h1>
+  <div id="map" style="height: 500px;"></div>
+
+  <!-- Modal for adding help details -->
+  <div id="addHelpModal" class="modal">
+    <div class="modal-content">
+      <h3>Adicionar um novo ponto de ajuda</h3>
+      <label for="helpName">Quem está pedindo ajuda?</label><br>
+      <input type="text" id="helpName" placeholder="Ex: Bombeiros do Porto" required><br><br>
+      <label for="helpNeeds">O que precisam?</label><br>
+      <input type="text" id="helpNeeds" placeholder="Ex: Água, comida, etc." required><br><br>
+      <label for="helpWhatsApp">Número do WhatsApp</label><br>
+      <input type="text" id="helpWhatsApp" placeholder="Ex: +351 912 345 678" required><br><br>
+      <button id="submitHelp">Confirmar</button>
+      <button id="cancelHelp">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Firebase and Leaflet Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Your App JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
